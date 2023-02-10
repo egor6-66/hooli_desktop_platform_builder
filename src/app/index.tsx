@@ -1,16 +1,15 @@
-import { QueryClientProvider } from '@tanstack/react-query';
 import React from 'react';
 
-import { withProviders } from './providers';
-import queryClient from './providers/with-query';
+import { withProviders, withQuery } from './providers';
 import { Routing } from '../pages';
 import './index.scss';
 
 function App() {
     return (
-        <QueryClientProvider client={queryClient}>
+        <withQuery.QueryClientProvider client={withQuery.queryClient}>
             <Routing />
-        </QueryClientProvider>
+            <withQuery.ReactQueryDevtools position="bottom-right" />
+        </withQuery.QueryClientProvider>
     );
 }
 
