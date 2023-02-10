@@ -22,6 +22,6 @@
     "removeComments": true,
     "jsx": "react",
     "target": "es5",
-    "declaration": true
+    "declaration": true,
   }
 }
