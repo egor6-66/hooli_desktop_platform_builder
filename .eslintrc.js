@@ -46,17 +46,16 @@ module.exports = {
             rules: {
                 semi: 2,
                 'import/no-unresolved': 'error',
-                // 'import/no-named-as-default-member': 'off',
                 'import/order': [
                     'error',
                     {
                         groups: [
-                            'builtin', // Built-in imports-manager (come from NodeJS native) go first
-                            'external', // <- External imports-manager
-                            'internal', // <- Absolute imports-manager
-                            ['sibling', 'parent'], // <- Relative imports-manager, the sibling and parent types they can be mingled together
-                            'index', // <- index imports-manager
-                            'unknown', // <- unknown
+                            'builtin',
+                            'external',
+                            'internal',
+                            ['sibling', 'parent'],
+                            'index',
+                            'unknown',
                         ],
                         pathGroups: [
                             {
@@ -67,13 +66,12 @@ module.exports = {
                         ],
                         'newlines-between': 'always',
                         alphabetize: {
-                            /* sort in ascending order. Options: ["ignore", "asc", "desc"] */
                             order: 'asc',
-                            /* ignore case. Options: [true, false] */
                             caseInsensitive: true,
                         },
                     },
                 ],
+                'prettier/prettier': 0,
                 'no-restricted-syntax': 0,
                 'import/extensions': 0,
                 'jsx-a11y/iframe-has-title': 0,
