@@ -1,0 +1,28 @@
+.button {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--title-color);
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  will-change: transform;
+
+  &:hover {
+    transform: scale(var(--scale));
+  }
+}
+
+.disabled {
+  background-color: var(--secondary-color);
+  pointer-events: none;
+  cursor: default;
+}
+
+.loading {
+}
+
+.error {
+}

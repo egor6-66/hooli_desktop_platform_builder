@@ -1,10 +1,13 @@
 import React from 'react';
 
+import { Routing } from 'pages';
+import { useTheme } from 'shared/hooks';
+
 import { withProviders, withQuery } from './providers';
-import { Routing } from '../pages';
 import './index.scss';
 
 function App() {
+    useTheme('dark');
     return (
         <withQuery.QueryClientProvider client={withQuery.queryClient}>
             <Routing />

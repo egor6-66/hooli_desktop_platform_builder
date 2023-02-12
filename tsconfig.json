@@ -21,7 +21,7 @@
     "preserveConstEnums": true,
     "removeComments": true,
     "jsx": "react",
-    "target": "es5",
-    "declaration": true
+    "target": "es2015",
+    "declaration": true,
   }
 }
