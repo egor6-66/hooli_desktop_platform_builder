@@ -1,36 +1,36 @@
 import cn from 'classnames';
 import cnBind from 'classnames/bind';
 import React, { ReactNode, ButtonHTMLAttributes } from 'react';
+import * as rrd from 'react-router-dom';
 
 import styles from './styles.module.scss';
 
 type Props = {
-    children: ReactNode;
+    children: any;
+    to: string;
     isDisabled?: boolean;
     isLoading?: boolean;
     isError?: boolean;
-    size?: 's' | 'm' | 'l' | 'xl';
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+};
 
-function Button(props: Props) {
-    const { children, isDisabled, isLoading, isError, size, ...other } = props;
+function Link(props: Props) {
+    const { children, to, isDisabled, isLoading, isError, ...other } = props;
 
     const cx = cnBind.bind(styles);
 
     const classes = cn(
-        cx('button', {
+        cx('link', {
             disabled: isDisabled,
             loading: isLoading,
             error: isError,
-            size,
         })
     );
 
     return (
-        <button className={classes} {...other}>
+        <rrd.Link className={classes} to={to} {...other}>
             {children}
-        </button>
+        </rrd.Link>
     );
 }
 
-export default Button;
+export default Link;

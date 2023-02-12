@@ -1,0 +1,13 @@
+.title {
+ color: var(--title-color);
+  animation: fadeIn ease 5s;
+}
+
+.secondary{
+  color: var(--subtitle-color);
+}
+
+.error {
+  color: var(--error-color);
+}
+
