@@ -1,3 +1,4 @@
+import { motion, AnimatePresence } from 'framer-motion';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -16,7 +17,15 @@ function AuthPage(props: Props) {
         [routes.sendCode]: <SendCodeWidget />,
     };
 
-    return <div className={styles.auth}>{routesDictionary[pathname]}</div>;
+    return (
+        <div className={styles.auth}>
+            <AnimatePresence mode="wait" initial={false}>
+                <motion.div key={pathname} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }}>
+                    {routesDictionary[pathname]}
+                </motion.div>
+            </AnimatePresence>
+        </div>
+    );
 }
 
 export default AuthPage;

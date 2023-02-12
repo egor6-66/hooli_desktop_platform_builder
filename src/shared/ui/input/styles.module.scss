@@ -1,0 +1,21 @@
+.input {
+  width: 300px;
+  height: 45px;
+  padding: 0 2px;
+  font-size: 18px;
+  color: var(--input-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--input-color);
+  transition: all var(--transition);
+
+  &:focus {
+    box-shadow: var(--input-box-shadow);
+  }
+}
+
+.error {
+  border: 1px solid var(--error-color);
+  &:focus {
+    box-shadow: var(--box-shadow-error);
+  }
+}
