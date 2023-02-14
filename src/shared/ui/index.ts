@@ -4,4 +4,4 @@ import Link from './link';
 import Spinner from './spinner';
 import Title from './title';
 
-export { Button, Input, Title, Link, Spinner };
+export { Button, Input, Spinner, Title, Link };

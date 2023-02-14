@@ -12,7 +12,7 @@ function App() {
     return (
         <withQuery.QueryClientProvider client={withQuery.queryClient}>
             <Routing />
-            <withQuery.ReactQueryDevtools initialIsOpen position="bottom-right" />
+            <withQuery.ReactQueryDevtools position="bottom-right" />
         </withQuery.QueryClientProvider>
     );
 }
