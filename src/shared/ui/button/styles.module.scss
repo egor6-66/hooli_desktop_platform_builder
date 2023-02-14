@@ -22,6 +22,8 @@
 }
 
 .loading {
+  pointer-events: none;
+  cursor: default;
 }
 
 .error {

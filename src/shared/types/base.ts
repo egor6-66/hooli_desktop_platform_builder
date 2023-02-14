@@ -1,1 +1,5 @@
-import * as yup from 'yup';
+export type Error = {
+    message: string;
+    type: string;
+};
+
