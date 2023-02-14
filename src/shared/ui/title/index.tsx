@@ -6,7 +6,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 
 type Props = {
-    children: string | number;
+    children: string | number | undefined;
     secondary?: boolean;
     isLoading?: boolean;
     isError?: boolean;
@@ -28,13 +28,7 @@ function Title(props: Props) {
     return (
         <AnimatePresence initial={false}>
             {children && (
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className={classes}
-                    {...other}
-                >
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className={classes} {...other}>
                     {children}
                 </motion.div>
             )}

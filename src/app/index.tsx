@@ -8,10 +8,11 @@ import './index.scss';
 
 function App() {
     useTheme('dark');
+
     return (
         <withQuery.QueryClientProvider client={withQuery.queryClient}>
             <Routing />
-            <withQuery.ReactQueryDevtools position="bottom-right" />
+            <withQuery.ReactQueryDevtools initialIsOpen position="bottom-right" />
         </withQuery.QueryClientProvider>
     );
 }
