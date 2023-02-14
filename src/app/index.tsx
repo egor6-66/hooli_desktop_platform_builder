@@ -8,6 +8,7 @@ import './index.scss';
 
 function App() {
     useTheme('dark');
+
     return (
         <withQuery.QueryClientProvider client={withQuery.queryClient}>
             <Routing />

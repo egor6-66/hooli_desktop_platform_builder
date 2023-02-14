@@ -3,6 +3,7 @@ import cnBind from 'classnames/bind';
 import React, { ReactNode, ButtonHTMLAttributes } from 'react';
 
 import styles from './styles.module.scss';
+import Spinner from '../spinner';
 
 type Props = {
     children: ReactNode;
@@ -28,7 +29,7 @@ function Button(props: Props) {
 
     return (
         <button className={classes} {...other}>
-            {children}
+            {isLoading ? <Spinner /> : children}
         </button>
     );
 }
