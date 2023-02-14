@@ -6,7 +6,7 @@ type Props = {
     size?: number;
 };
 
-export default function Spinner(props: Props) {
+function Spinner(props: Props) {
     const { size = 30 } = props;
     return (
         <svg className={styles.spinner} viewBox="0 0 50 50" width={size} height={size}>
@@ -14,3 +14,5 @@ export default function Spinner(props: Props) {
         </svg>
     );
 }
+
+export default Spinner;
