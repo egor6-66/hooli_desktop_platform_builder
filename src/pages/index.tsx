@@ -10,12 +10,19 @@ const AuthPage = lazy(() => import('./auth'));
 export function Routing() {
     const authRoutes = [routes.login, routes.sendCode];
 
-    return tokens.checkTokensFromLocalStorage() ? (
+    const privateRoutes = (
         <Routes>
-            <Route path={routes.main} element={<MainPage />} />
+            <Route index element={<MainPage />} />
+            <Route path={routes.main} element={<MainPage />}>
+                <Route index element={<div>messages</div>} />
+                <Route path="messages" element={<div>messages</div>} />
+                <Route path="tasks" element={<div>tasks</div>} />
+            </Route>
             <Route path="*" element={<Navigate to={routes.main} replace />} />
         </Routes>
-    ) : (
+    );
+
+    const publicRoutes = (
         <Routes>
             {authRoutes.map((path) => (
                 <Route key={path} path={path} element={<AuthPage />} />
@@ -23,4 +30,6 @@ export function Routing() {
             <Route path="*" element={<Navigate to={routes.login} replace />} />
         </Routes>
     );
+
+    return tokens.checkTokensFromLocalStorage() ? privateRoutes : publicRoutes;
 }
