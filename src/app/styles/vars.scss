@@ -10,19 +10,18 @@
 }
 
 :root[data-theme="dark"] {
-  --background-color: #131821;
+  --background-color: #150E41;
   --background-color2: #1A202C;
   --background-color3: #232B38;
 
-  --primary-color: #076ED1;
-  --secondary-color: #2A313C;
-  --error-color: rgba(255, 75, 75, 0.87);
+  --primary-color: #7B57C8;
+  --secondary-color: #2B2763;
+  --error-color: #FF4B4B;
 
   --title-color: #FFFFFF;
   --subtitle-color: #718096;
 
-  --input-color: #8D9093;
-  --input-box-shadow: 0 0 6px 0 var(--input-color);
+  --border-color:#40417A;
 
   --box-shadow-error: 0 0 6px 0 var(--error-color);
 }

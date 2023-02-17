@@ -1,35 +1,35 @@
 import React, { InputHTMLAttributes } from 'react';
 import { FieldErrors } from 'react-hook-form';
 
+import { base } from 'shared/types';
 import { Button, Input, Title } from 'shared/ui';
 
 import styles from './styles.module.scss';
-import { base } from '../../../../../shared/types';
 
 type Props = {
     register: (arg: any) => InputHTMLAttributes<HTMLInputElement>;
     handleSubmit: () => Promise<any>;
     isLoading: boolean;
-    errors: FieldErrors<{ phone: base.Error; code: base.Error }>;
+    errors: FieldErrors<{ phone: base.Error; pass: base.Error }>;
 };
 
 function LoginForm(props: Props) {
     const { register, handleSubmit, isLoading, errors } = props;
 
-    const disabledBtn = errors.phone || errors.code;
-    const errorText = errors.code?.message || errors.root?.message;
+    const disabledBtn = errors.phone || errors.pass;
+    const errorText = errors.pass?.message || errors.root?.message;
 
     return (
         <form onSubmit={handleSubmit} className={styles.login}>
             <div className={styles.inputGroup}>
-                <Title>Номер телефона</Title>
-                <Input placeholder="Введите ваш номер телефона" {...register('phone')} isError={!!errors.phone} maxLength={12} />
+                <Title secondary>Введите Ваш корпоративный логин</Title>
+                <Input placeholder="Логин" {...register('login')} isError={!!errors.phone} />
                 <Title isError>{errors.phone ? String(errors.phone.message) : ''}</Title>
             </div>
 
             <div className={styles.inputGroup}>
-                <Title>Код</Title>
-                <Input placeholder=" Введите код из смс" {...register('code')} isError={!!errors.code} maxLength={4} />
+                <Title secondary>Введите пароль</Title>
+                <Input placeholder="Пароль" {...register('pass')} isError={!!errors.pass} />
                 <Title isError>{errorText ? String(errorText) : ''}</Title>
             </div>
 
