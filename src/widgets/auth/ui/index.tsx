@@ -11,7 +11,6 @@ function LoginWidget(props: Props) {
     return (
         <div className={styles.login}>
             <LoginFeature />
-            <Link to="../send_code">send_code</Link>
         </div>
     );
 }
