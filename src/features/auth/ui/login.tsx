@@ -1,10 +1,8 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
 
-import { LoginForm, api } from 'entities/auth/by-phone';
-import { yup } from 'entities/auth/by-phone/lib';
+import { LoginForm, api, yup } from 'entities/auth';
 import { useViewerStore, viewerLib } from 'entities/viewer';
 import { useUpdatePhoneNumber } from 'shared/hooks';
 import { tokens } from 'shared/lib';
@@ -34,7 +32,7 @@ function LoginFeature(props: Props) {
 
     const onsubmit = (data: LoginFormType) => {
         handleLogin(
-            { phone: useUpdatePhoneNumber(data.phone), code: data.code },
+            { phone: useUpdatePhoneNumber(data.login), code: data.pass },
             {
                 onSuccess,
                 onError: () => setError('root', { message: 'Неверный номер или код' }),
