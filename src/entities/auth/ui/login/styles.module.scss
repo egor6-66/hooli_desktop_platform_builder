@@ -1,4 +1,4 @@
-.sendCode {
+.login {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +13,4 @@
 
 .inputGroup {
   height: 80px;
-  div:first-child {
-    color: var(--input-color);
-  }
 }
