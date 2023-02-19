@@ -1,12 +1,8 @@
-# Hoolichat 
-
----
-
+# Hoolichat
+***
 ## [Web](http://hoolichat.online/registration)
 ## [Desktop](https://drive.google.com/drive/folders/1Eqp-9qxTKzU92_G8PsfcsNT11QXwPGJN)
-
----
-
+***
 ## Stack
 
 Язык - [TypeScript](https://www.typescriptlang.org/)
