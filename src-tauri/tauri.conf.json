@@ -21,7 +21,6 @@
       "publisher": "Unknown Publisher",
       "copyright": "Copyright Notice",
       "icon": [
-        "icons/logo128x128.svg",
         "icons/logo.ico"
       ],
       "resources": [],
