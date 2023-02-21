@@ -23,7 +23,10 @@
     "lint": "eslint .",
     "lint:fix": "npx eslint ./src --fix",
     "killing_port": "npx kill-port 3000",
-    "up_version": "npm version patch && git push origin main && git push origin --tags"
+    "up_version": "npm version patch"
+  },
+  "husky": {
+    "hooks": {}
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",
@@ -42,6 +45,7 @@
     "cross-env": "^7.0.3",
     "crypto-js": "^4.1.1",
     "framer-motion": "^9.0.2",
+    "husky": "^8.0.3",
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
