@@ -23,7 +23,7 @@
     "lint": "eslint .",
     "lint:fix": "npx eslint ./src --fix",
     "killing_port": "npx kill-port 3000",
-    "up_version": "npm version patch"
+    "up_version": "npm version patch && git push origin --tags"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",
