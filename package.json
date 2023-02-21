@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=false && && react-scripts build",
+    "build": "CI=false && react-scripts build",
     "tauri:start": "npm run tauri dev",
     "tauri:build": "CI=false && && npm run tauri build",
     "tauri": "tauri",
