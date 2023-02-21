@@ -16,14 +16,14 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set \\\"CI=false\\\" && react-scripts build",
+    "build": "CI=false && && react-scripts build",
     "tauri:start": "npm run tauri dev",
-    "tauri:build": "set \\\"CI=false\\\" && npm run tauri build",
+    "tauri:build": "CI=false && && npm run tauri build",
     "tauri": "tauri",
     "lint": "eslint .",
     "lint:fix": "npx eslint ./src --fix",
     "killing_port": "npx kill-port 3000",
-    "up_version": "npm version patch && git push origin main"
+    "up_version": "npm version patch && git push origin main && git push origin --tags"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",
