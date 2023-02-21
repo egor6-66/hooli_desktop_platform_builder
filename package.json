@@ -16,9 +16,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set CI=false && react-scripts build",
+    "build": "react-scripts build",
     "tauri:start": "npm run tauri dev",
-    "tauri:build": "set CI=false && npm run tauri build",
+    "tauri:build": "npm run tauri build",
     "tauri": "tauri",
     "lint": "eslint .",
     "lint:fix": "npx eslint ./src --fix",
