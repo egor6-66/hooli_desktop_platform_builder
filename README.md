@@ -9,6 +9,8 @@
 
 Фреймворк - [React](https://reactjs.org/)
 
+Десктоп -  [Tauri](https://tauri.app/)
+
 Архитектура - [Feature-Sliced Design](https://feature-sliced.design/) 
 
 Стор - [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
